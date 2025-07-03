@@ -1,7 +1,7 @@
 import React from "react";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 
-export default TextField = ({ placeholder = "Placeholder" }) => {
+const TextField = ({ placeholder = "Placeholder" }) => {
   return (
     <div className="w-full max-w-md relative">
       {/* ikon */}
@@ -21,3 +21,4 @@ export default TextField = ({ placeholder = "Placeholder" }) => {
   );
 };
 
+export default TextField;
