@@ -12,7 +12,7 @@ const TextField = ({placeholder = "Placeholder"}) =>{
                 placeholder={placeholder}
                 className="w-45 py-2 pl-10 pr-3 rounded-xl border 
                 border-gray-200 bg-white text-sm text-gray-700 placeholder-gray-400
-                focus:outline-0 focus:ring-2 focus:ring-blue-400 focus:border-blue-300 shadow-sm">
+                focus:outline-0 focus:ring focus:ring-blue-400 focus:border-blue-300 shadow-sm">
             </input>
         </div>
     );
