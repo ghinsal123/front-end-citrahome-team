@@ -9,6 +9,7 @@ import TokopediaButton from "../components/TokopediaButton";
 import BuyButton from "../components/BuyButton";
 import HeroImage from '../components/HeroImage'
 import ViewButton from "../components/ViewButton";
+import Hubungi from "../components/Hubungi";
 
 
 
@@ -23,40 +24,34 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <h2 className="text-xl text-gray-800 font-bold mb-4">Preview AllProduct</h2>
         <h2 className="font-bold text-gray-800 mb-2">Preview All Products</h2>
         <div className="space-y-6">
           <AllProduct />
         </div>
       </section>
       <section>
-        <h2 className="text-xl text-gray-800 font-bold mb-4">Preview ProductCard</h2>
         <h2 className="font-bold text-gray-800 mb-2">Preview Product Card</h2>
         <div className="space-y-6">
           <ProductCard />
         </div>
       </section>
       <section>
-        <h2 className="text-xl text-gray-800 font-bold mb-4">Preview Popular</h2>
         <h2 className="font-bold text-gray-800 mb-2">Preview TextField</h2>
         <div className="space-y-6 max-w-xs">
           <Popular src="/img/popular1.jpg" />
         </div>
       </section>
       <section>
-        <h2 className="text-xl text-gray-800 font-bold mb-4">Preview Best</h2>
         <h2 className="font-bold text-gray-800 mb-2">Preview TextField</h2>
         <div className="space-y-6 max-w-xs">
           <Best src="/img/best1.jpg" />
         </div>
       </section>
-
       <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Shopee Button</h2>
         <ShopeeButton />
       </section>
-
-        <section>
+      <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Tokopedia Button</h2>
         <TokopediaButton />
       </section>
@@ -70,7 +65,7 @@ export default function Home() {
         </div>
         </section>
         <section>
-          <h2 className="text-xl text-gray-800 font-bold mb-4">Preview Hero Image</h2>
+          <h2 className="font-bold text-gray-800 mb-2">Preview Shopee Button</h2>
           <div className="p-6 space-y-6">
             <HeroImage />
           </div>
@@ -82,6 +77,12 @@ export default function Home() {
         <div>
         <ViewButton/>
         </div>
+        </section>
+        <section>
+          <h2 className="font-bold text-gray-800 mb-2">Preview TextField</h2>
+          <div className="space-y-6">
+            <Hubungi placeholder="Placeholder" />
+          </div>
         </section>
     </div>
   );
