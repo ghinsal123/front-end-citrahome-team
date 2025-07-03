@@ -7,7 +7,7 @@ import Best from "../components/Best";
 import ShopeeButton from "../components/ShopeeButton";
 import TokopediaButton from "../components/TokopediaButton";
 import BuyButton from "../components/BuyButton";
-
+import HeroImage from '../components/HeroImage'
 
 
 export default function Home() {
@@ -20,25 +20,25 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <h2 className="text-xl text-gray-800 font-bold mb-4">Preview TextField</h2>
+        <h2 className="text-xl text-gray-800 font-bold mb-4">Preview AllProduct</h2>
         <div className="space-y-6">
           <AllProduct />
         </div>
       </section>
       <section>
-        <h2 className="text-xl text-gray-800 font-bold mb-4">Preview TextField</h2>
+        <h2 className="text-xl text-gray-800 font-bold mb-4">Preview ProductCard</h2>
         <div className="space-y-6">
           <ProductCard />
         </div>
       </section>
       <section>
-        <h2 className="text-xl text-gray-800 font-bold mb-4">Preview TextField</h2>
+        <h2 className="text-xl text-gray-800 font-bold mb-4">Preview Popular</h2>
         <div className="space-y-6 max-w-xs">
           <Popular src="/img/popular1.jpg" />
         </div>
       </section>
       <section>
-        <h2 className="text-xl text-gray-800 font-bold mb-4">Preview TextField</h2>
+        <h2 className="text-xl text-gray-800 font-bold mb-4">Preview Best</h2>
         <div className="space-y-6 max-w-xs">
           <Best src="/img/best1.jpg" />
         </div>
@@ -62,6 +62,12 @@ export default function Home() {
         <div>
         <BuyButton />
         </div>
+        </section>
+        <section>
+          <h2 className="text-xl text-gray-800 font-bold mb-4">Preview Hero Image</h2>
+          <div className="p-6 space-y-6">
+            <HeroImage />
+          </div>
         </section>
     </div>
   );
