@@ -1,6 +1,7 @@
 import React from "react";
 import TextField from "../components/TextField";
 import AllProduct from "../components/AllProduct";
+import ProductCard from "../components/ProductCard";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       <section>
         <h2 className="text-xl text-gray-800 font-bold mb-4">Preview TextField</h2>
         <div className="space-y-8">
-          <TextField placeholder="Contoh Input" />
+        <TextField placeholder="Contoh Input" />
         </div>
       </section>
       <section>
@@ -16,6 +17,10 @@ export default function Home() {
         <div className="space-y-6">
           <AllProduct />
         </div>
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Product Card 1</h2>
+        <ProductCard />
       </section>
     </div>
   );
