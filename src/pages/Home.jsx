@@ -10,11 +10,9 @@ import BuyButton from "../components/BuyButton";
 import HeroImage from '../components/HeroImage'
 import ViewButton from "../components/ViewButton";
 import Hubungi from "../components/Hubungi";
-
-
-
 import VisitButton from "../components/VisitButton";
 import Map from "../components/Map";
+
 
 export default function Home() {
   return (
@@ -51,21 +49,23 @@ export default function Home() {
       </section>
       <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Shopee Button</h2>
+        <div className="space-y-6 max-w-xs">
         <ShopeeButton />
+        </div>
       </section>
       <section>
         <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Tokopedia Button</h2>
+        <div className="space-y-6 max-w-xs">
         <TokopediaButton />
+        </div>
       </section>
       <section className="space-y-4">
-        <h2 className="font-bold text-gray-800 mb-2">
-        Preview Beli
-        </h2>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Beli</h2>
         <div>
         <BuyButton />
         </div>
-        </section>
+      </section>
         <section>
           <h2 className="font-bold text-gray-800 mb-2">Preview Shopee Button</h2>
           <div className="p-6 space-y-6">
