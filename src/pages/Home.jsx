@@ -8,9 +8,8 @@ import ShopeeButton from "../components/ShopeeButton";
 import TokopediaButton from "../components/TokopediaButton";
 import BuyButton from "../components/BuyButton";
 import ViewButton from "../components/ViewButton";
-
-
-
+import VisitButton from "../components/VisitButton";
+import Map from "../components/Map";
 
 export default function Home() {
   return (
@@ -45,17 +44,14 @@ export default function Home() {
           <Best src="/img/best1.jpg" />
         </div>
       </section>
-
       <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Shopee Button</h2>
         <ShopeeButton />
       </section>
-
         <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Tokopedia Button</h2>
         <TokopediaButton />
       </section>
-
       <section className="space-y-4">
         <h2 className="font-bold text-gray-800 mb-2">
         Preview Beli
@@ -63,16 +59,31 @@ export default function Home() {
         <div>
         <BuyButton />
         </div>
-        </section>
-
-        <section className="space-y-4">
+      </section>
+      <section className="space-y-4">
         <h2 className="font-bold text-gray-800 mb-2">
         Preview Lihat - Ketika di Klik 
         </h2>
         <div>
         <ViewButton/>
         </div>
-        </section>
+      </section>
+      <section className="space-y-4">
+        <h2 className="font-bold text-gray-800 mb-2">
+        Preview Visit 
+        </h2>
+        <div>
+        <VisitButton />
+        </div>
+      </section>
+      <section className="space-y-4">
+        <h2 className="font-bold text-gray-800 mb-2">
+        Preview Map
+        </h2>
+        <div>
+        <Map />
+        </div>
+      </section>
     </div>
   );
 }

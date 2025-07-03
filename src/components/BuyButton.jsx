@@ -8,7 +8,7 @@ export default function BuyButton () {
       className="group flex items-center justify-between gap-2
         font-bold text-sm px-4 py-2 rounded-full
         text-[#FF6464] bg-white
-        hover:bg-[#FF6464] hover:text-white transition-all duration-300"
+        hover:bg-[#E9724C] hover:text-white transition-all duration-300"
     >
       BELI SEKARANG
 
