@@ -4,6 +4,9 @@ import AllProduct from "../components/AllProduct";
 import ProductCard from "../components/ProductCard";
 import Popular from "../components/Popular";
 import Best from "../components/Best";
+import ShopeeButton from "../components/ShopeeButton";
+import TokopediaButton from "../components/TokopediaButton";
+
 
 export default function Home() {
   return (
@@ -37,6 +40,16 @@ export default function Home() {
         <div className="space-y-6 max-w-xs">
           <Best src="/img/best1.jpg" />
         </div>
+      </section>
+
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Shopee Button</h2>
+        <ShopeeButton />
+      </section>
+
+        <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Tokopedia Button</h2>
+        <TokopediaButton />
       </section>
     </div>
   );

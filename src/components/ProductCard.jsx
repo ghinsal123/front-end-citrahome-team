@@ -17,14 +17,14 @@ export default function ProductCard () {
       <div className="flex gap-2">
         <a
           href="#"
-          className="bg-[#FA4D09] hover:bg-[#d03e06]  text-white text-sm font-semibold px-3 py-1 rounded-md flex items-center gap-1"
+          className="bg-[#F17157] hover:bg-[#EE4D2D]  text-white text-sm font-semibold px-3 py-1 rounded-md flex items-center gap-1"
         >
           <img src="../assets/img/Shopee.png" alt="Shopee" className="w-4 h-4" />
           shopee
         </a>
         <a
           href="#"
-          className="bg-[#03AC0E]  hover:bg-[#028c0c] text-white text-sm font-semibold px-3 py-1 rounded-md flex items-center gap-1"
+          className="bg-[#33BB7C]  hover:bg-[#00AA5B] text-white text-sm font-semibold px-3 py-1 rounded-md flex items-center gap-1"
         >
           <img src="/assets/.png" alt="Tokopedia" className="w-4 h-4" />
           tokopedia
