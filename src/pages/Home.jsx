@@ -7,6 +7,8 @@ import Best from "../components/Best";
 import ShopeeButton from "../components/ShopeeButton";
 import TokopediaButton from "../components/TokopediaButton";
 import BuyButton from "../components/BuyButton";
+import ViewButton from "../components/ViewButton";
+
 
 
 
@@ -14,31 +16,31 @@ export default function Home() {
   return (
     <div className="w-full min-h-screen p-6 space-y-10 bg-white">
       <section>
-        <h2 className="text-xl text-gray-800 font-bold mb-4">Preview TextField</h2>
+        <h2 className="font-bold text-gray-800 mb-2">Preview TextField</h2>
         <div className="space-y-6">
           <TextField placeholder="Placeholder" />
         </div>
       </section>
       <section>
-        <h2 className="text-xl text-gray-800 font-bold mb-4">Preview TextField</h2>
+        <h2 className="font-bold text-gray-800 mb-2">Preview All Products</h2>
         <div className="space-y-6">
           <AllProduct />
         </div>
       </section>
       <section>
-        <h2 className="text-xl text-gray-800 font-bold mb-4">Preview TextField</h2>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Product Card</h2>
         <div className="space-y-6">
           <ProductCard />
         </div>
       </section>
       <section>
-        <h2 className="text-xl text-gray-800 font-bold mb-4">Preview TextField</h2>
+        <h2 className="font-bold text-gray-800 mb-2">Preview TextField</h2>
         <div className="space-y-6 max-w-xs">
           <Popular src="/img/popular1.jpg" />
         </div>
       </section>
       <section>
-        <h2 className="text-xl text-gray-800 font-bold mb-4">Preview TextField</h2>
+        <h2 className="font-bold text-gray-800 mb-2">Preview TextField</h2>
         <div className="space-y-6 max-w-xs">
           <Best src="/img/best1.jpg" />
         </div>
@@ -55,12 +57,20 @@ export default function Home() {
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-lg font-semibold text-black-600 flex items-center gap-1">
+        <h2 className="font-bold text-gray-800 mb-2">
         Preview Beli
         </h2>
-
         <div>
         <BuyButton />
+        </div>
+        </section>
+
+        <section className="space-y-4">
+        <h2 className="font-bold text-gray-800 mb-2">
+        Preview Lihat - Ketika di Klik 
+        </h2>
+        <div>
+        <ViewButton/>
         </div>
         </section>
     </div>
