@@ -2,9 +2,15 @@
 import React from 'react'
 
 /**
- * @param {string} src   URL gambar
- * @param {string} label Teks di atas gambar (opsional, default "#Popular2024")
+ * @typedef {Object} BestProps
+ * @property {string} src - URL gambar
+ * @property {string} [label] - Label opsional
  */
+
+/**
+ * @param {BestProps} props
+ */
+
 export default function Best({ src, label = '#BestForHouse' }) {
   return (
     <div className="group relative h-48 w-full overflow-hidden rounded-2xl shadow-md">

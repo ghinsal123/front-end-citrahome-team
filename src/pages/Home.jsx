@@ -6,6 +6,8 @@ import Popular from "../components/Popular";
 import Best from "../components/Best";
 import ShopeeButton from "../components/ShopeeButton";
 import TokopediaButton from "../components/TokopediaButton";
+import BuyButton from "../components/BuyButton";
+
 
 
 export default function Home() {
@@ -51,6 +53,16 @@ export default function Home() {
         <h2 className="font-bold text-gray-800 mb-2">Preview Tokopedia Button</h2>
         <TokopediaButton />
       </section>
+
+      <section className="space-y-4">
+        <h2 className="text-lg font-semibold text-black-600 flex items-center gap-1">
+        Preview Beli
+        </h2>
+
+        <div>
+        <BuyButton />
+        </div>
+        </section>
     </div>
   );
 }
