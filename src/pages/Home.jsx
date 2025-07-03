@@ -36,72 +36,63 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <h2 className="font-bold text-gray-800 mb-2">Preview TextField</h2>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Popular</h2>
         <div className="space-y-6 max-w-xs">
           <Popular src="/img/popular1.jpg" />
         </div>
       </section>
       <section>
-        <h2 className="font-bold text-gray-800 mb-2">Preview TextField</h2>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Best</h2>
         <div className="space-y-6 max-w-xs">
           <Best src="/img/best1.jpg" />
         </div>
       </section>
       <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Shopee Button</h2>
-        <div className="space-y-6 max-w-xs">
+        <div className="space-y-6">
         <ShopeeButton />
         </div>
       </section>
       <section>
-        <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Tokopedia Button</h2>
-        <div className="space-y-6 max-w-xs">
-        <TokopediaButton />
+        <div className="space-y-6">
+          <TokopediaButton />
         </div>
       </section>
-      <section className="space-y-4">
+      <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Beli</h2>
-        <div>
+        <div className="space-y-6">
         <BuyButton />
         </div>
       </section>
-        <section>
-          <h2 className="font-bold text-gray-800 mb-2">Preview Hero Image</h2>
-          <div className="p-6 space-y-6">
-            <HeroImage />
-          </div>
-        </section>
-
-        <section className="space-y-4">
-        <h2 className="font-bold text-gray-800 mb-2">
-        Preview Lihat - Ketika di Klik 
-        </h2>
-        <div>
-        <ViewButton/>
-        </div>
-        </section>
-        <section>
-          <h2 className="font-bold text-gray-800 mb-2">Preview Hubungi</h2>
-          <div className="space-y-6">
-            <Hubungi placeholder="Placeholder" />
-          </div>
-        </section>
-      </section>
-      <section className="space-y-4">
-        <h2 className="font-bold text-gray-800 mb-2">
-        Preview Visit 
-        </h2>
-        <div>
-        <VisitButton />
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Hero Image</h2>
+        <div className="p-6 space-y-6">
+          <HeroImage />
         </div>
       </section>
-      <section className="space-y-4">
-        <h2 className="font-bold text-gray-800 mb-2">
-        Preview Map
-        </h2>
-        <div>
-        <Map />
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Lihat - Ketika di Klik </h2>
+        <div className="space-y-6">
+          <ViewButton/>
+        </div>
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Hubungi</h2>
+        <div className="space-y-6">
+          <Hubungi placeholder="Placeholder" />
+        </div>
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Visit </h2>
+        <div className="space-y-6">
+          <VisitButton />
+        </div>
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Map</h2>
+        <div className="space-y-6">
+          <Map />
         </div>
       </section>
     </div>
