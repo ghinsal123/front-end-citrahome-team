@@ -1,9 +1,9 @@
 import React from 'react'
 
 /**
- * @param {string} src   URL gambar
- * @param {string} label Teks di atas gambar (opsional, default "#Popular2024")
+ * @param {{ src: string, label?: string }} props
  */
+
 export default function Popular({ src, label = '#Popular2024' }) {
   return (
     <div className="group relative h-48 w-full overflow-hidden rounded-2xl shadow-md">
