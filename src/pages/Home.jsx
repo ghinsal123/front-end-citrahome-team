@@ -13,6 +13,8 @@ import Hubungi from "../components/Hubungi";
 
 
 
+import VisitButton from "../components/VisitButton";
+import Map from "../components/Map";
 
 export default function Home() {
   return (
@@ -52,10 +54,10 @@ export default function Home() {
         <ShopeeButton />
       </section>
       <section>
+        <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Tokopedia Button</h2>
         <TokopediaButton />
       </section>
-
       <section className="space-y-4">
         <h2 className="font-bold text-gray-800 mb-2">
         Preview Beli
@@ -70,6 +72,7 @@ export default function Home() {
             <HeroImage />
           </div>
         </section>
+
         <section className="space-y-4">
         <h2 className="font-bold text-gray-800 mb-2">
         Preview Lihat - Ketika di Klik 
@@ -84,6 +87,23 @@ export default function Home() {
             <Hubungi placeholder="Placeholder" />
           </div>
         </section>
+      </section>
+      <section className="space-y-4">
+        <h2 className="font-bold text-gray-800 mb-2">
+        Preview Visit 
+        </h2>
+        <div>
+        <VisitButton />
+        </div>
+      </section>
+      <section className="space-y-4">
+        <h2 className="font-bold text-gray-800 mb-2">
+        Preview Map
+        </h2>
+        <div>
+        <Map />
+        </div>
+      </section>
     </div>
   );
 }
