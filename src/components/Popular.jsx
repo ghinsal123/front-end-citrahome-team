@@ -1,4 +1,3 @@
-// src/components/PopularCard.jsx
 import React from 'react'
 
 /**
