@@ -67,7 +67,7 @@ export default function Home() {
         </div>
       </section>
         <section>
-          <h2 className="font-bold text-gray-800 mb-2">Preview Shopee Button</h2>
+          <h2 className="font-bold text-gray-800 mb-2">Preview Hero Image</h2>
           <div className="p-6 space-y-6">
             <HeroImage />
           </div>
@@ -82,7 +82,7 @@ export default function Home() {
         </div>
         </section>
         <section>
-          <h2 className="font-bold text-gray-800 mb-2">Preview TextField</h2>
+          <h2 className="font-bold text-gray-800 mb-2">Preview Hubungi</h2>
           <div className="space-y-6">
             <Hubungi placeholder="Placeholder" />
           </div>
