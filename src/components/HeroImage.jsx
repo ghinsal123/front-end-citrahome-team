@@ -5,7 +5,7 @@ export default function HeroImage() {
   return (
     <div className="relative w-full max-w-5xl mx-auto overflow-hidden rounded-2xl shadow-lg group">
       <img
-        src="/img/hero.jpg" 
+        src={heroImg}
         alt="Hero"
         className="w-full h-[400px] md:h-[600px] object-cover transition-transform duration-500 group-hover:scale-105"
       />
