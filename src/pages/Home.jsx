@@ -12,6 +12,7 @@ import ViewButton from "../components/ViewButton";
 import Hubungi from "../components/Hubungi";
 import VisitButton from "../components/VisitButton";
 import Map from "../components/Map";
+import MessageButton from "../components/MessageButton";
 import Image from "../components/Image";
 import Email from "../components/Email";
 import Message from "../components/Message";
@@ -121,6 +122,12 @@ export default function Home() {
         <h2 className="font-bold text-gray-800 mb-2">Preview Map</h2>
         <div className="space-y-6">
           <Map />
+        </div>
+      </section>
+         <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Message Button</h2>
+        <div className="space-y-6">
+          <MessageButton />
         </div>
       </section>
       <section>

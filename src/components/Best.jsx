@@ -1,5 +1,5 @@
 import React from 'react';
-import bestImg from '../assets/images/best.jpg'; // Pastikan path ini benar
+import bestImg from "../assets/images/best.jpg";
 
 export default function Popular({ src, label = '#Popular2024' }) {
   return (
