@@ -14,6 +14,7 @@ import VisitButton from "../components/VisitButton";
 import Map from "../components/Map";
 import Email from "../components/Email";
 import Message from "../components/Message";
+import Logo from "../components/Logo";
 
 
 export default function Home() {
@@ -107,6 +108,12 @@ export default function Home() {
         <h2 className="font-bold text-gray-800 mb-2">Preview Message</h2>
         <div className="space-y-6">
           <Message placeholder="Placeholder" />
+        </div>
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Logo</h2>
+        <div className="space-y-6">
+          <Logo/>
         </div>
       </section>
     </div>
