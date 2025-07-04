@@ -1,4 +1,5 @@
 import React from 'react'
+import heroImg from '../assets/images/hero.jpg'  
 
 export default function HeroImage() {
   return (
