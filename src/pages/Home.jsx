@@ -64,39 +64,27 @@ export default function Home() {
           <TokopediaButton />
         </div>
       </section>
-            <section className="space-y-4">
-        <h2 className="font-bold text-gray-800 mb-2">
-        Preview Image
-        </h2>
-        <div>
-        <Image />
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Image</h2>
+        <div className="space-y-6">
+          <Image />
         </div>
       </section>
-      <section className="space-y-4">
-        <h2 className="font-bold text-gray-800 mb-2">
-        Preview Beli
-        </h2>
-        <div>
-        <BuyButton />
-        </div>
-        </section>
-        <section className="space-y-4">
-        <h2 className="font-bold text-gray-800 mb-2">
-        Preview Lihat - Ketika di Klik 
-        </h2>
-        <div>
-        <ViewButton/>
-        </div>
-        </section>
       <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Beli</h2>
         <div className="space-y-6">
-        <BuyButton />
+          <BuyButton />
+        </div>
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Lihat - Ketika di Klik </h2>
+        <div className="space-y-6">
+          <ViewButton/>
         </div>
       </section>
       <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Hero Image</h2>
-        <div className="p-6 space-y-6">
+        <div className="space-y-6">
           <HeroImage />
         </div>
       </section>
