@@ -17,6 +17,11 @@ import Image from "../components/Image";
 import Email from "../components/Email";
 import Message from "../components/Message";
 import Logo from "../components/Logo";
+import Caraosel from "../components/Caraosel";
+import Produk from "../components/Produk";
+import LogoSlider from "../components/LogoSlider";
+import TestiCard from "../components/TestiCard";
+import PromoSlider from "../components/PromoSlider";
 
 
 export default function Home() {
@@ -134,6 +139,36 @@ export default function Home() {
         <h2 className="font-bold text-gray-800 mb-2">Preview Logo</h2>
         <div className="space-y-6">
           <Logo/>
+        </div>
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Caroesel</h2>
+        <div className="space-y-6">
+          <Caraosel/>
+        </div>
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Produk</h2>
+        <div className="space-y-6">
+          <Produk/>
+        </div>
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Logo</h2>
+        <div className="space-y-6">
+          <LogoSlider/>
+        </div>
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Testi Card</h2>
+        <div className="space-y-6">
+          <TestiCard/>
+        </div>
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Promo</h2>
+        <div className="space-y-6">
+          <PromoSlider/>
         </div>
       </section>
     </div>
