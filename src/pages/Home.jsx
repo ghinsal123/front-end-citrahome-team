@@ -22,7 +22,6 @@ import CategoryTabs from "../components/CategoryTabs";
 import TestimonialCard from "../components/TestimonialCard";
 import TestimonialSlider from "../components/TestimonialSlider";
 import ProductCardPro from "../components/ProductCardPro";
-
 import Caraosel from "../components/Caraosel";
 import Produk from "../components/Produk";
 import LogoSlider from "../components/LogoSlider";
