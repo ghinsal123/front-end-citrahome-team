@@ -1,7 +1,7 @@
 import React from 'react';
 import popularImg from '../assets/images/popular.jpg';
 
-export default function Popular() {
+export default function Popular(src) {
   return (
     <div className="relative inline-block overflow-hidden rounded-2xl shadow-lg group">
       <img

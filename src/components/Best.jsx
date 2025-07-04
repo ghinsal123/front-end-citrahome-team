@@ -2,7 +2,7 @@ import React from 'react';
 import bestImg from "../assets/images/best.jpg";
 
 
-export default function Best() {
+export default function Best(src) {
   return (
     <div className="relative inline-block overflow-hidden rounded-2xl shadow-lg group">
       <img
