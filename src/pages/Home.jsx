@@ -13,6 +13,7 @@ import Hubungi from "../components/Hubungi";
 import VisitButton from "../components/VisitButton";
 import Map from "../components/Map";
 import Email from "../components/Email";
+import Message from "../components/Message";
 
 
 export default function Home() {
@@ -100,6 +101,12 @@ export default function Home() {
         <h2 className="font-bold text-gray-800 mb-2">Preview Email</h2>
         <div className="space-y-6">
           <Email placeholder="Placeholder" />
+        </div>
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Message</h2>
+        <div className="space-y-6">
+          <Message placeholder="Placeholder" />
         </div>
       </section>
     </div>
