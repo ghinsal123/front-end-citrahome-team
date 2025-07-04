@@ -1,7 +1,7 @@
 import React from 'react';
 import popularImg from '../assets/images/popular.jpg'; // Pastikan path ini benar
 
-export default function Popular({ label = '#Popular2024' }) {
+export default function Popular({src, label = '#Popular2024' }) {
   return (
     <div className="group relative h-48 w-full overflow-hidden rounded-2xl shadow-md">
       {/* gambar */}
