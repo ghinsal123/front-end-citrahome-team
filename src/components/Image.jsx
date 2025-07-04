@@ -1,7 +1,7 @@
 import React from "react";
 import semenImg from '../assets/images/semen.png';
 
-export default function ImageHoverDarken() {
+export default function Image() {
   return (
     <div className="relative w-48 h-64 rounded-xl overflow-hidden shadow-md group">
       <img

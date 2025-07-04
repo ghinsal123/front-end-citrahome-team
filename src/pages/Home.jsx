@@ -17,6 +17,12 @@ import Image from "../components/Image";
 import Email from "../components/Email";
 import Message from "../components/Message";
 import Logo from "../components/Logo";
+import Hero from "../components/Hero";
+import CategoryTabs from "../components/CategoryTabs";
+import TestimonialCard from "../components/TestimonialCard";
+import TestimonialSlider from "../components/TestimonialSlider";
+import ProductCardPro from "../components/ProductCardPro";
+
 
 
 export default function Home() {
@@ -41,18 +47,6 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <h2 className="font-bold text-gray-800 mb-2">Preview Popular</h2>
-        <div className="space-y-6 max-w-xs">
-          <Popular src="/img/popular1.jpg" />
-        </div>
-      </section>
-      <section>
-        <h2 className="font-bold text-gray-800 mb-2">Preview Best</h2>
-        <div className="space-y-6 max-w-xs">
-          <Best src="/img/best1.jpg" />
-        </div>
-      </section>
-      <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Shopee Button</h2>
         <div className="space-y-6">
         <ShopeeButton />
@@ -71,6 +65,18 @@ export default function Home() {
         </div>
       </section>
       <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Popular</h2>
+        <div className="space-y-6 max-w-xs">
+          <Popular src="/img/popular1.jpg" />
+        </div>
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Best</h2>
+        <div className="space-y-6 max-w-xs">
+          <Best src="/img/best1.jpg" />
+        </div>
+      </section>
+      <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Beli</h2>
         <div className="space-y-6">
           <BuyButton />
@@ -86,12 +92,6 @@ export default function Home() {
         <h2 className="font-bold text-gray-800 mb-2">Preview Hero Image</h2>
         <div className="space-y-6">
           <HeroImage />
-        </div>
-      </section>
-      <section>
-        <h2 className="font-bold text-gray-800 mb-2">Preview Lihat - Ketika di Klik </h2>
-        <div className="space-y-6">
-          <ViewButton/>
         </div>
       </section>
       <section>
@@ -135,6 +135,28 @@ export default function Home() {
         <div className="space-y-6">
           <Logo/>
         </div>
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Hero </h2>
+        <div className="space-y-6">
+        <Hero />
+        </div>
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Category Tabs </h2>
+        <CategoryTabs />
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Testi Card</h2>
+        <TestimonialCard />
+      </section>
+      <section className="py-8">
+        <h2 className="font-bold text-gray-800 mb-2">Preview Testi Slider</h2>
+       <TestimonialSlider />
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Product Card Pro</h2>
+       <ProductCardPro />
       </section>
     </div>
   );
