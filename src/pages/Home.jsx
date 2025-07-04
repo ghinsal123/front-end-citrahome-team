@@ -7,10 +7,12 @@ import Best from "../components/Best";
 import ShopeeButton from "../components/ShopeeButton";
 import TokopediaButton from "../components/TokopediaButton";
 import BuyButton from "../components/BuyButton";
-import HeroImage from '../components/HeroImage'
+import HeroImage from "../components/HeroImage";
 import ViewButton from "../components/ViewButton";
 import VisitButton from "../components/VisitButton";
 import Map from "../components/Map";
+import Image from "../components/Image";
+
 
 export default function Home() {
   return (
@@ -57,6 +59,14 @@ export default function Home() {
         <h2 className="font-bold text-gray-800 mb-2">Preview Tokopedia Button</h2>
         <TokopediaButton />
       </section>
+            <section className="space-y-4">
+        <h2 className="font-bold text-gray-800 mb-2">
+        Preview Image
+        </h2>
+        <div>
+        <Image />
+        </div>
+      </section>
       <section className="space-y-4">
         <h2 className="font-bold text-gray-800 mb-2">
         Preview Beli
@@ -65,7 +75,6 @@ export default function Home() {
         <BuyButton />
         </div>
         </section>
-
         <section className="space-y-4">
         <h2 className="font-bold text-gray-800 mb-2">
         Preview Lihat - Ketika di Klik 
