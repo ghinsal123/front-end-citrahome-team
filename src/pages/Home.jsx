@@ -12,6 +12,7 @@ import ViewButton from "../components/ViewButton";
 import Hubungi from "../components/Hubungi";
 import VisitButton from "../components/VisitButton";
 import Map from "../components/Map";
+import Email from "../components/Email";
 
 
 export default function Home() {
@@ -93,6 +94,12 @@ export default function Home() {
         <h2 className="font-bold text-gray-800 mb-2">Preview Map</h2>
         <div className="space-y-6">
           <Map />
+        </div>
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Email</h2>
+        <div className="space-y-6">
+          <Email placeholder="Placeholder" />
         </div>
       </section>
     </div>
