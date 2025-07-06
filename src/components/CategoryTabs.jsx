@@ -6,7 +6,7 @@ const CategoryTabs = () => {
   const [activeTab, setActiveTab] = useState("Keramik");
 
   return (
-    <div className="bg-[#5B2C06] rounded-xl p-2 flex justify-between items-center max-w-md mx-auto">
+    <div className="bg-[#522202] rounded-xl p-2 flex justify-between items-center max-w-md mx-auto">
       {categories.map((category) => (
         <button
           key={category}

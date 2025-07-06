@@ -1,16 +1,16 @@
 import React from "react";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
-import profileImg from '../assets/images/profile.jpeg';
-import hero2Img from "../assets/images/hero2.jpeg";
+import profileImg from '../assets/images/people4.jpeg';
+import hero2Img from "../assets/images/referensi.jpeg";
 
 const TestimonialCard = () => {
   return (
-    <div className="relative w-60 max-w-xs rounded-2xl overflow-hidden shadow-lg">
+    <div className="relative w-72 max-w-xs rounded-2xl overflow-hidden shadow-lg">
       {/* Background image */}
       <img
         src={hero2Img}
         alt="Background"
-        className="w-full h-70 object-cover"
+        className="w-full h-90 object-cover"
       />
 
       {/* Testimonial Card Overlay */}

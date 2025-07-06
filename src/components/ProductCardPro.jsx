@@ -5,17 +5,20 @@ import tokopedia2 from "../assets/images/tokopedia2.png";
 import tokopediaHover from "../assets/images/tokopediahover.png";
 import metro from "../assets/images/metro.png";
 
-
 const ProductCardPro = () => {
   return (
     <div className="w-60 bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-      {/* Gambar produk */}
+      
+      {/* Gambar produk dengan hover gelap */}
       <div className="p-4">
-        <img
-          src={metro}
-          alt="Metro Pink"
-          className="rounded-xl w-full h-52 object-cover"
-        />
+        <div className="relative group rounded-xl overflow-hidden">
+          <img
+            src={metro}
+            alt="Metro Pink"
+            className="rounded-xl w-full h-52 object-cover transition duration-300"
+          />
+          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 rounded-xl"></div>
+        </div>
       </div>
 
       {/* Konten produk */}
@@ -31,7 +34,8 @@ const ProductCardPro = () => {
 
         <p className="text-sm text-gray-500 mt-2">Beli di</p>
         <div className="flex gap-2 mt-1">
-          {/* Shopee button */}
+          
+          {/* Shopee */}
           <a
             href="#"
             className="group border border-gray-300 rounded-md px-3 py-1 shadow-sm 
@@ -50,7 +54,7 @@ const ProductCardPro = () => {
             />
           </a>
 
-          {/* Tokopedia button */}
+          {/* Tokopedia */}
           <a
             href="#"
             className="group border border-gray-300 rounded-md px-3 py-1 shadow-sm 

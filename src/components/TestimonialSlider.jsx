@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
-import profileImg from "../assets/images/profile.jpeg";
-import hero2Img from "../assets/images/hero2.jpeg";
+import profileImg from "../assets/images/people4.jpeg";
+import hero2Img from "../assets/images/referensi.jpeg";
 
 const testimonials = [
   { id: 1, name: "Ibu Sukijan", role: "Ibu Rumah Tangga", text: "Keramik dan catnya bagus banget." },
@@ -55,12 +55,12 @@ const TestimonialSlider = () => {
       <div className="overflow-hidden">
         <div className="flex justify-center gap-4 transition duration-500 ease-in-out">
           {visibleTestimonials.map((item) => (
-            <div key={item.id} className="w-60 px-2 flex-shrink-0">
+            <div key={item.id} className="w-72 px-2 flex-shrink-0">
               <div
                 className="relative bg-cover bg-center rounded-xl shadow-md"
                 style={{
                   backgroundImage: `url(${hero2Img})`,
-                  height: "270px",
+                  height: "320px",
                 }}
               >
                 <div className="absolute inset-0 flex flex-col items-center justify-end p-4">

@@ -27,6 +27,12 @@ import Produk from "../components/Produk";
 import LogoSlider from "../components/LogoSlider";
 import TestiCard from "../components/TestiCard";
 import PromoSlider from "../components/PromoSlider";
+import ClaimButton from "../components/ClaimButton";
+import CallButton from "../components/CallButton";
+import MapsOp2 from "../components/MapsOp2";
+
+
+
 
 
 export default function Home() {
@@ -157,6 +163,24 @@ export default function Home() {
       <section className="py-8">
         <h2 className="font-bold text-gray-800 mb-2">Preview Testi Slider</h2>
        <TestimonialSlider />
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Claim Button</h2>
+        <div className="space-y-6">
+          <ClaimButton/>
+        </div>
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Call Button</h2>
+        <div className="space-y-6">
+          <CallButton/>
+        </div>
+      </section>
+       <section>
+        <h2 className="font-bold text-gray-800 mb-2">Preview Maps Op 2</h2>
+        <div className="space-y-6">
+          <MapsOp2/>
+        </div>
       </section>
       <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Product Card Pro</h2>
