@@ -9,15 +9,14 @@ const ProductCardPro = () => {
   return (
     <div className="w-60 bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
       
-      {/* Gambar produk dengan hover gelap */}
+      {/* Gambar produk dengan hover gelap ke terang */}
       <div className="p-4">
         <div className="relative group rounded-xl overflow-hidden">
           <img
             src={metro}
             alt="Metro Pink"
-            className="rounded-xl w-full h-52 object-cover transition duration-300"
+            className="rounded-xl w-full h-52 object-cover transition duration-300 filter brightness-75 group-hover:brightness-100"
           />
-          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 rounded-xl"></div>
         </div>
       </div>
 
