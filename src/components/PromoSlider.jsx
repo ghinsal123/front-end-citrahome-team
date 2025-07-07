@@ -72,50 +72,47 @@ export default function PromoSlider() {
   const slide = slides[idx];
 
 const DiscountLayout = () => (
-  <div className="w-full h-full flex flex-col lg:flex-row items-start justify-between text-white px-6 lg:px-20 py-10 relative">
-    {/* Teks promo */}
-    <div className="space-y-3 max-w-md z-10 flex flex-col items-center text-center">
-      <h1 className="font-extrabold text-2xl md:text-4xl">{slide.title}</h1>
+  <div className="flex flex-col lg:flex-row items-center justify-center gap-10 w-full">
+    {/* ─── Teks promo ─── */}
+    <div className="text-white space-y-3 max-w-md">
+     <h1 className="font-extrabold text-2xl md:text-4xl leading-tight w-full text-center">
+        {slide.title}
+      </h1>
 
-      <div className="flex flex-col gap-1 text-2xl md:text-3xl font-bold">
+      <div className="flex items-center gap-2 text-lg md:text-2xl font-bold">
         <span>{slide.discountText}</span>
-        <span className="text-3xl font-extrabold">+</span>
+        <span className="text-3xl">+</span>
         <span>{slide.installment}</span>
       </div>
 
-      <span className="inline-block bg-[#eb5d3e] px-4 py-1 text-[11px] md:text-sm font-semibold rounded-md">
+      <span className="inline-block bg-[#eb5d3e] px-3 py-1 text-[11px] md:text-sm font-semibold rounded">
         {slide.period}
       </span>
     </div>
 
-    {/* Gambar kursi dan background bulat */}
-    <div className="absolute bottom-38 right-10 lg:bottom-10 lg:right-10 w-[220px] h-[220px]">
-      {/* Lingkaran oranye di belakang */}
-      <div className="absolute w-32 h-29 bg-[#F26A3E] rounded-full top-5 left-32 -translate-x-1/2 -translate-y-1/2 -z-10" />
+    {/* ─── Gambar kursi + lingkaran oranye ─── */}
+    <div className="relative mt-8 lg:mt-0">
+      {/* lingkaran oranye*/}
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-8 w-43 h-40 bg-orange-500 rounded-full -z-10" />
 
-      {/* Kursi kiri */}
-      <div className="absolute bottom-30 left-7 bg-white w-28 h-28 rounded-full flex items-center justify-center shadow-xl">
-        <img
-          src={slide.images[1]}
-          alt="kursi-1"
-          className="w-20 h-20 object-contain"
-        />
-      </div>
-     {/* Kursi kanan */}
-      <div className="absolute bottom-30 left-28 bg-white w-29 h-29 rounded-full flex items-center justify-center shadow-xl">
-        <img
-          src={slide.images[0]}
-          alt="kursi-0"
-          className="w-20 h-20 object-contain"
-        />
+      {/* dua kursi nempel */}
+      <div className="relative w-[280px] h-[160px]">
+        {/* kursi kiri */}
+        <div className="absolute left-8 top-0  bg-white rounded-full p-4 w-38 h-38 shadow-md flex items-center justify-center -ml-8">
+          <img src={kursi2} alt="chair 2" className="w-30 h-30 object-contain" />
+        </div>
+        {/* kursi kanan */}
+        <div className="absolute left-30 top-0 bg-white rounded-full p-4 w-40 h-40 shadow-md flex items-center justify-center">
+          <img src={kursi1} alt="chair 1" className="w-32 h-32 object-contain" />
+        </div>
       </div>
     </div>
   </div>
 );
 
-
   const DiscountOnlyLayout = () => (
-    <div className="flex flex-col lg:flex-row items-center gap-10 w-full">
+  <div className="flex flex-col lg:flex-row items-center justify-center gap-10 w-full">
+      {/* ─── Teks promo ─── */}
       <div className="text-white space-y-3 max-w-md">
         <h1 className="text-3xl md:text-4xl font-extrabold">{slide.discountText}</h1>
         <h2 className="text-5xl md:text-6xl font-extrabold">{slide.discountPercent}</h2>
@@ -123,12 +120,38 @@ const DiscountLayout = () => (
           {slide.period}
         </span>
       </div>
+
+      {/* ─── Kotak oranye + gambar AC ─── */}
       <div className="relative mt-8 lg:mt-0">
-        <div className="absolute inset-0 bg-orange-400/90 rounded-2xl w-80 h-40 -right-8 top-4 -z-10" />
-        <div className="flex gap-6 pl-8 pr-12">
-          {slide.images.map((src) => (
-            <img key={src} src={src} alt="ac" className="w-24 h-24 object-contain" />
-          ))}
+        {/* kotak oranye (gradien, sudut kanan‑atas rounded) */}
+        <div className="absolute -right-6 top-4 w-80 h-40
+                        bg-gradient-to-bl from-orange-500/90 to-orange-500/0
+                        rounded-tr-3xl -z-10" />
+
+        {/* container gambar */}
+        <div className="relative w-80 h-40">
+          {/* AC 2 – tengah, lebih besar & lebih tinggi */}
+          <img
+            src={ac2}
+            alt="ac2"
+            className="absolute left-1/2 -translate-x-1/2 top-0 w-28 h-28 object-contain z-20"
+          />
+
+          {/* baris AC bawah (gap kecil) */}
+          <div className="absolute bottom-0 inset-x-0 flex justify-center gap-2">
+            {/* AC 3 – kiri */}
+            <img
+              src={ac3}
+              alt="ac3"
+              className="w-24 h-20 object-contain z-10"
+            />
+            {/* AC 1 – kanan, urutan kedua supaya di kanan */}
+            <img
+              src={ac1}
+              alt="ac1"
+              className="w-24 h-30 object-contain z-10"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -154,7 +177,7 @@ const DiscountLayout = () => (
       </div>
       <div className="bg-white rounded-2xl w-96 h-40 flex items-center justify-center shadow-xl mt-8 lg:mt-0">
         {slide.images.map((src) => (
-          <img key={src} src={src} alt="tank" className="h-32 object-contain mx-2" />
+          <img key={src} src={src} alt="tank" className="object-contain mx-2" />
         ))}
       </div>
     </div>
@@ -167,7 +190,7 @@ const DiscountLayout = () => (
   };
 
   return (
-    <section className="relative w-230 h-[500px] overflow-hidden select-none rounded-2xl shadow-lg">
+  <section className="relative w-full max-w-5xl h-[580px] mx-auto overflow-hidden select-none shadow-lg">
       <img src={slide.bg} alt="bg" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-black/50" />
       <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-white to-transparent" />
