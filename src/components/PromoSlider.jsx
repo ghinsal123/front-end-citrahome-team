@@ -150,31 +150,38 @@ const DiscountLayout = () => (
     </div>
   );
 
-  const SolutionLayout = () => (
-    <div className="flex flex-col lg:flex-row items-center gap-10 w-full">
-      <div className="text-white space-y-3 max-w-md">
-        <img src={slide.logo} alt="logo" className="h-8 w-auto" />
-        {slide.titleLines.map((l) => (
-          <h1 key={l} className="font-extrabold text-3xl md:text-4xl leading-tight">
-            {l}
-          </h1>
-        ))}
-        <div className="flex gap-6 mt-2 text-xs md:text-sm">
-          {slide.bullets.map(({ icon: Icon, text }) => (
-            <div key={text} className="flex flex-col items-center">
-              <Icon className="w-6 h-6" />
-              {text}
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="bg-white rounded-2xl w-96 h-40 flex items-center justify-center shadow-xl mt-8 lg:mt-0">
-        {slide.images.map((src) => (
-          <img key={src} src={src} alt="tank" className="object-contain mx-2" />
+const SolutionLayout = () => (
+  <div className="flex flex-col lg:flex-row items-center gap-10 w-full">
+    {/* ─── Teks & ikon ─── */}
+    <div className="text-white space-y-3 max-w-md">
+      <img src={slide.logo} alt="logo" className="h-8 w-auto" />
+      {slide.titleLines.map((l) => (
+        <h1 key={l} className="font-extrabold text-3xl md:text-4xl leading-tight">
+          {l}
+        </h1>
+      ))}
+      <div className="flex gap-6 mt-2 text-xs md:text-sm">
+        {slide.bullets.map(({ icon: Icon, text }) => (
+          <div key={text} className="flex flex-col items-center">
+            <Icon className="w-6 h-6" />
+            {text}
+          </div>
         ))}
       </div>
     </div>
-  );
+
+    {/* ─── Kotak gambar toren ─── */}
+    <div
+      className="relative mt-8 lg:mt-0 w-96 h-40 bg-white shadow-xl
+                 rounded-tr-2xl rounded-br-2xl rounded-bl-2xl
+                 rounded-tl-[160px] overflow-hidden flex items-center justify-center"
+    >
+      {slide.images.map((src) => (
+        <img key={src} src={src} alt="tank" className="object-contain mx-2" />
+      ))}
+    </div>
+  </div>
+);
 
   const renderContent = () => {
     if (slide.variant === "discount") return <DiscountLayout />;
