@@ -6,6 +6,7 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
 } from "@heroicons/react/24/outline";
+import waimg from "../assets/images/logo-whatsapp.png";
 
 /* ------- local image imports ------- */
 import bg1 from "../assets/images/bg1.png";
@@ -53,16 +54,6 @@ const slides = [
     images: [tankBundle],
   },
 ];
-
-const Whatsapp = () => (
-  <svg viewBox="0 0 24 24" className="w-6 h-6">
-    <circle cx="12" cy="12" r="12" fill="#25D366" />
-    <path
-      fill="#fff"
-      d="M16.7 14.4l-1.4-.6a1 1 0 00-.6-.1 2 2 0 01-1.4-.6 5 5 0 01-1.5-3.4 3 3 0 01.4-1.7.9.9 0 00-.9-1.2 7 7 0 00-2.4 1.1 2.8 2.8 0 00-.9 2.1 7 7 0 002 4.6 7.3 7.3 0 004.7 2 3.6 3.6 0 002.1-.7 4 4 0 001.1-2.5c0-.1 0-.2-.2-.3z"
-    />
-  </svg>
-);
 
 export default function PromoSlider() {
   const [idx, setIdx] = useState(0);
@@ -199,11 +190,11 @@ const DiscountLayout = () => (
         {renderContent()}
       </div>
 
-      <button onClick={prev} aria-label="prev" className="absolute left-6 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 p-2 rounded-full z-20">
-        <ChevronLeftIcon className="w-6 h-6 text-white" />
+      <button onClick={prev} aria-label="prev" className="absolute left-6 top-1/2 -translate-y-1/2 bg-white hover:bg-white p-2 rounded-full z-20">
+        <ChevronLeftIcon className="w-6 h-6 text-black" />
       </button>
-      <button onClick={next} aria-label="next" className="absolute right-6 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 p-2 rounded-full z-20">
-        <ChevronRightIcon className="w-6 h-6 text-white" />
+      <button onClick={next} aria-label="next" className="absolute right-6 top-1/2 -translate-y-1/2 bg-white hover:bg-white p-2 rounded-full z-20">
+        <ChevronRightIcon className="w-6 h-6 text-black" />
       </button>
 
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
@@ -225,7 +216,7 @@ const DiscountLayout = () => (
             <div className="absolute bottom-0 left-0 w-0 h-0 border-t-[8px] border-l-[8px] border-t-transparent border-l-green-600"></div>
           </div>
           <div className="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md transition duration-300 group-hover:translate-x-21">
-            <Whatsapp />
+            <img src={waimg} alt="WhatsApp" className="w-8 h-8" />
           </div>
         </div>
       </div>
