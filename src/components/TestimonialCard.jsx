@@ -10,7 +10,7 @@ const TestimonialCard = () => {
       <img
         src={hero2Img}
         alt="Background"
-        className="w-full h-90 object-cover"
+        className="w-full h-93 object-cover"
       />
 
       {/* Testimonial Card Overlay */}
@@ -21,7 +21,7 @@ const TestimonialCard = () => {
             <img
               src={profileImg}
               alt="Avatar"
-              className="w-12 h-12 rounded-full border-2 border-white -mt-10"
+              className="w-15 h-15 rounded-full border-4 border-white -mt-10"
             />
           </div>
 

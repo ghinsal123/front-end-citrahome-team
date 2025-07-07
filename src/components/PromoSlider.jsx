@@ -1,5 +1,3 @@
-/* ─── src/components/PromoSlider.jsx ───
-   Versi final: layout rapih, gambar proporsional, container rounded‑xl + tombol WA */
 import React, { useState } from "react";
 import {
   DevicePhoneMobileIcon,
@@ -73,29 +71,48 @@ export default function PromoSlider() {
   const next = () => setIdx((p) => (p === total - 1 ? 0 : p + 1));
   const slide = slides[idx];
 
-  const DiscountLayout = () => (
-    <div className="flex flex-col lg:flex-row items-center gap-10 w-full">
-      <div className="text-white space-y-3 max-w-md">
-        <h1 className="font-extrabold text-2xl md:text-4xl leading-tight">{slide.title}</h1>
-        <div className="flex items-center gap-2 text-lg md:text-2xl font-bold">
-          <span>{slide.discountText}</span>
-          <span className="text-3xl">+</span>
-          <span>{slide.installment}</span>
-        </div>
-        <span className="inline-block bg-[#eb5d3e] px-3 py-1 text-[11px] md:text-sm font-semibold rounded">
-          {slide.period}
-        </span>
+const DiscountLayout = () => (
+  <div className="w-full h-full flex flex-col lg:flex-row items-start justify-between text-white px-6 lg:px-20 py-10 relative">
+    {/* Teks promo */}
+    <div className="space-y-3 max-w-md z-10 flex flex-col items-center text-center">
+      <h1 className="font-extrabold text-2xl md:text-4xl">{slide.title}</h1>
+
+      <div className="flex flex-col gap-1 text-2xl md:text-3xl font-bold">
+        <span>{slide.discountText}</span>
+        <span className="text-3xl font-extrabold">+</span>
+        <span>{slide.installment}</span>
       </div>
-      <div className="relative mt-8 lg:mt-0">
-        <div className="absolute w-44 h-44 bg-orange-500 rounded-full -right-8 top-10 -z-10" />
-        <div className="bg-white rounded-xl px-8 py-4 flex items-center gap-8 shadow-xl">
-          {slide.images.map((src) => (
-            <img key={src} src={src} alt="chair" className="w-24 h-24 object-contain" />
-          ))}
-        </div>
+
+      <span className="inline-block bg-[#eb5d3e] px-4 py-1 text-[11px] md:text-sm font-semibold rounded-md">
+        {slide.period}
+      </span>
+    </div>
+
+    {/* Gambar kursi dan background bulat */}
+    <div className="absolute bottom-38 right-10 lg:bottom-10 lg:right-10 w-[220px] h-[220px]">
+      {/* Lingkaran oranye di belakang */}
+      <div className="absolute w-32 h-29 bg-[#F26A3E] rounded-full top-5 left-32 -translate-x-1/2 -translate-y-1/2 -z-10" />
+
+      {/* Kursi kiri */}
+      <div className="absolute bottom-30 left-7 bg-white w-28 h-28 rounded-full flex items-center justify-center shadow-xl">
+        <img
+          src={slide.images[1]}
+          alt="kursi-1"
+          className="w-20 h-20 object-contain"
+        />
+      </div>
+     {/* Kursi kanan */}
+      <div className="absolute bottom-30 left-28 bg-white w-29 h-29 rounded-full flex items-center justify-center shadow-xl">
+        <img
+          src={slide.images[0]}
+          alt="kursi-0"
+          className="w-20 h-20 object-contain"
+        />
       </div>
     </div>
-  );
+  </div>
+);
+
 
   const DiscountOnlyLayout = () => (
     <div className="flex flex-col lg:flex-row items-center gap-10 w-full">
@@ -150,7 +167,7 @@ export default function PromoSlider() {
   };
 
   return (
-    <section className="relative w-full h-[500px] overflow-hidden select-none rounded-2xl shadow-lg">
+    <section className="relative w-230 h-[500px] overflow-hidden select-none rounded-2xl shadow-lg">
       <img src={slide.bg} alt="bg" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-black/50" />
       <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-white to-transparent" />

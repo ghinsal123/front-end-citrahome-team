@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import waimg from "../assets/images/logo-whatsapp.png";
-import hero1 from "../assets/images/referensi1.jpeg";
-import hero2 from "../assets/images/referensi2.jpeg";
+import hero1 from "../assets/images/bg1.png";
+import hero2 from "../assets/images/bg2.png";
 import hero3 from "../assets/images/referensi3.jpeg";
 import hero4 from "../assets/images/referensi4.jpeg";
 import hero5 from "../assets/images/referensi5.jpeg";

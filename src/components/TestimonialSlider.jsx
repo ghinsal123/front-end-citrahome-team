@@ -60,7 +60,7 @@ const TestimonialSlider = () => {
                 className="relative bg-cover bg-center rounded-xl shadow-md"
                 style={{
                   backgroundImage: `url(${hero2Img})`,
-                  height: "320px",
+                  height: "330px",
                 }}
               >
                 <div className="absolute inset-0 flex flex-col items-center justify-end p-4">
@@ -69,7 +69,7 @@ const TestimonialSlider = () => {
                       <img
                         src={profileImg}
                         alt={item.name}
-                        className="w-14 h-14 rounded-full border-4 border-white shadow"
+                        className="w-15 h-15 rounded-full border-4 border-white shadow"
                       />
                     </div>
                     <h3 className="text-sm font-semibold text-gray-800">{item.name}</h3>
