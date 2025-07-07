@@ -73,32 +73,48 @@ export default function PromoSlider() {
   const next = () => setIdx((p) => (p === total - 1 ? 0 : p + 1));
   const slide = slides[idx];
 
-  const DiscountLayout = () => (
-    <div className="flex flex-col lg:flex-row items-center gap-10 w-full">
-      <div className="text-white space-y-3 max-w-md">
-        <h1 className="font-extrabold text-2xl md:text-4xl leading-tight">{slide.title}</h1>
-        <div className="flex items-center gap-2 text-lg md:text-2xl font-bold">
-          <span>{slide.discountText}</span>
-          <span className="text-3xl">+</span>
-          <span>{slide.installment}</span>
-        </div>
-        <span className="inline-block bg-[#eb5d3e] px-3 py-1 text-[11px] md:text-sm font-semibold rounded">
-          {slide.period}
-        </span>
+const DiscountLayout = () => (
+  <div className="flex flex-col lg:flex-row items-center justify-center gap-10 w-full">
+    {/* ─── Teks promo ─── */}
+    <div className="text-white space-y-3 max-w-md">
+      <h1 className="font-extrabold text-2xl md:text-4xl leading-tight">
+        {slide.title}
+      </h1>
+
+      <div className="flex items-center gap-2 text-lg md:text-2xl font-bold">
+        <span>{slide.discountText}</span>
+        <span className="text-3xl">+</span>
+        <span>{slide.installment}</span>
       </div>
-      <div className="relative mt-8 lg:mt-0">
-        <div className="absolute w-44 h-44 bg-orange-500 rounded-full -right-8 top-10 -z-10" />
-        <div className="bg-white rounded-xl px-8 py-4 flex items-center gap-8 shadow-xl">
-          {slide.images.map((src) => (
-            <img key={src} src={src} alt="chair" className="w-24 h-24 object-contain" />
-          ))}
+
+      <span className="inline-block bg-[#eb5d3e] px-3 py-1 text-[11px] md:text-sm font-semibold rounded">
+        {slide.period}
+      </span>
+    </div>
+
+    {/* ─── Gambar kursi + lingkaran oranye ─── */}
+    <div className="relative mt-8 lg:mt-0">
+      {/* lingkaran oranye — turun ±32 px */}
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-1 w-50 h-50 bg-orange-500 rounded-full -z-10" />
+
+      {/* dua kursi nempel */}
+      <div className="flex">
+        {/* kursi kiri */}
+        <div className="bg-white rounded-full p-4 w-43 h-43 shadow-md flex items-center justify-center">
+          <img src={kursi1} alt="chair 1" className="w-35 h-35 object-contain" />
+        </div>
+        {/* kursi kanan – geser lebih rapat */}
+        <div className="bg-white rounded-full p-4 w-43 h-43 shadow-md flex items-center justify-center -ml-8">
+          <img src={kursi2} alt="chair 2" className="w-35 h-35 object-contain" />
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 
   const DiscountOnlyLayout = () => (
-    <div className="flex flex-col lg:flex-row items-center gap-10 w-full">
+  <div className="flex flex-col lg:flex-row items-center justify-center gap-10 w-full">
+      {/* ─── Teks promo ─── */}
       <div className="text-white space-y-3 max-w-md">
         <h1 className="text-3xl md:text-4xl font-extrabold">{slide.discountText}</h1>
         <h2 className="text-5xl md:text-6xl font-extrabold">{slide.discountPercent}</h2>
@@ -106,12 +122,38 @@ export default function PromoSlider() {
           {slide.period}
         </span>
       </div>
+
+      {/* ─── Kotak oranye + gambar AC ─── */}
       <div className="relative mt-8 lg:mt-0">
-        <div className="absolute inset-0 bg-orange-400/90 rounded-2xl w-80 h-40 -right-8 top-4 -z-10" />
-        <div className="flex gap-6 pl-8 pr-12">
-          {slide.images.map((src) => (
-            <img key={src} src={src} alt="ac" className="w-24 h-24 object-contain" />
-          ))}
+        {/* kotak oranye (gradien, sudut kanan‑atas rounded) */}
+        <div className="absolute -right-6 top-4 w-80 h-40
+                        bg-gradient-to-bl from-orange-500/90 to-orange-500/0
+                        rounded-tr-3xl -z-10" />
+
+        {/* container gambar */}
+        <div className="relative w-80 h-40">
+          {/* AC 2 – tengah, lebih besar & lebih tinggi */}
+          <img
+            src={ac2}
+            alt="ac2"
+            className="absolute left-1/2 -translate-x-1/2 top-0 w-28 h-28 object-contain z-20"
+          />
+
+          {/* baris AC bawah (gap kecil) */}
+          <div className="absolute bottom-0 inset-x-0 flex justify-center gap-2">
+            {/* AC 3 – kiri */}
+            <img
+              src={ac3}
+              alt="ac3"
+              className="w-24 h-20 object-contain z-10"
+            />
+            {/* AC 1 – kanan, urutan kedua supaya di kanan */}
+            <img
+              src={ac1}
+              alt="ac1"
+              className="w-24 h-30 object-contain z-10"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -137,7 +179,7 @@ export default function PromoSlider() {
       </div>
       <div className="bg-white rounded-2xl w-96 h-40 flex items-center justify-center shadow-xl mt-8 lg:mt-0">
         {slide.images.map((src) => (
-          <img key={src} src={src} alt="tank" className="h-32 object-contain mx-2" />
+          <img key={src} src={src} alt="tank" className="object-contain mx-2" />
         ))}
       </div>
     </div>
@@ -150,7 +192,7 @@ export default function PromoSlider() {
   };
 
   return (
-    <section className="relative w-full h-[500px] overflow-hidden select-none rounded-2xl shadow-lg">
+  <section className="relative w-full max-w-5xl h-[580px] mx-auto overflow-hidden select-none shadow-lg">
       <img src={slide.bg} alt="bg" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-black/50" />
       <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-white to-transparent" />
