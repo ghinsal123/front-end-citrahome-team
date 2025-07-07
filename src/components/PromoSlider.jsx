@@ -1,5 +1,3 @@
-/* ─── src/components/PromoSlider.jsx ───
-   Versi final: layout rapih, gambar proporsional, container rounded‑xl + tombol WA */
 import React, { useState } from "react";
 import {
   DevicePhoneMobileIcon,
@@ -68,7 +66,7 @@ const DiscountLayout = () => (
   <div className="flex flex-col lg:flex-row items-center justify-center gap-10 w-full">
     {/* ─── Teks promo ─── */}
     <div className="text-white space-y-3 max-w-md">
-      <h1 className="font-extrabold text-2xl md:text-4xl leading-tight">
+     <h1 className="font-extrabold text-2xl md:text-4xl leading-tight w-full text-center">
         {slide.title}
       </h1>
 
@@ -85,18 +83,18 @@ const DiscountLayout = () => (
 
     {/* ─── Gambar kursi + lingkaran oranye ─── */}
     <div className="relative mt-8 lg:mt-0">
-      {/* lingkaran oranye — turun ±32 px */}
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-1 w-50 h-50 bg-orange-500 rounded-full -z-10" />
+      {/* lingkaran oranye*/}
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-8 w-43 h-40 bg-orange-500 rounded-full -z-10" />
 
       {/* dua kursi nempel */}
-      <div className="flex">
+      <div className="relative w-[280px] h-[160px]">
         {/* kursi kiri */}
-        <div className="bg-white rounded-full p-4 w-43 h-43 shadow-md flex items-center justify-center">
-          <img src={kursi2} alt="chair 2" className="w-35 h-35 object-contain" />
+        <div className="absolute left-8 top-0  bg-white rounded-full p-4 w-38 h-38 shadow-md flex items-center justify-center -ml-8">
+          <img src={kursi2} alt="chair 2" className="w-30 h-30 object-contain" />
         </div>
-        {/* kursi kanan – geser lebih rapat */}
-        <div className="bg-white rounded-full p-4 w-43 h-43 shadow-md flex items-center justify-center -ml-8">
-          <img src={kursi1} alt="chair 1" className="w-35 h-35 object-contain" />
+        {/* kursi kanan */}
+        <div className="absolute left-30 top-0 bg-white rounded-full p-4 w-40 h-40 shadow-md flex items-center justify-center">
+          <img src={kursi1} alt="chair 1" className="w-32 h-32 object-contain" />
         </div>
       </div>
     </div>
