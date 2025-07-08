@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
-import profileImg from "../assets/images/people4.jpeg";
-import hero2Img from "../assets/images/referensi.jpeg";
 
 const testimonials = [
   { id: 1, name: "Ibu Sukijan", role: "Ibu Rumah Tangga", text: "Keramik dan catnya bagus banget." },
@@ -30,7 +28,6 @@ const TestimonialSlider = () => {
 
   return (
     <div className="relative w-full max-w-6xl mx-auto px-4">
-      {/* Tombol Navigasi */}
       <button
         onClick={handlePrev}
         disabled={page === 0}
@@ -51,7 +48,6 @@ const TestimonialSlider = () => {
         <ArrowRightIcon className="w-5 h-5 text-gray-800" />
       </button>
 
-      {/* Card Slider */}
       <div className="overflow-hidden">
         <div className="flex justify-center gap-4 transition duration-500 ease-in-out">
           {visibleTestimonials.map((item) => (
@@ -59,7 +55,7 @@ const TestimonialSlider = () => {
               <div
                 className="relative bg-cover bg-center rounded-xl shadow-md"
                 style={{
-                  backgroundImage: `url(${hero2Img})`,
+                  backgroundImage: `url('/assets/images/referensi.jpeg')`,
                   height: "330px",
                 }}
               >
@@ -67,7 +63,7 @@ const TestimonialSlider = () => {
                   <div className="bg-white rounded-xl w-full text-center pt-10 pb-4 px-3 relative">
                     <div className="absolute -top-7 left-1/2 transform -translate-x-1/2">
                       <img
-                        src={profileImg}
+                        src="/assets/images/people4.jpeg"
                         alt={item.name}
                         className="w-15 h-15 rounded-full border-4 border-white shadow"
                       />

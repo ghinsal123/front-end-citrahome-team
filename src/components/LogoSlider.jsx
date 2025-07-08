@@ -1,26 +1,15 @@
-import React, { useState, useEffect } from 'react';
-
-// Import logo dari assets
-import rucika from '../assets/images/rucika.png';
-import philips from '../assets/images/philips.png';
-import holcim from '../assets/images/holcim.png';
-import makita from '../assets/images/makita.png';
-import toto from '../assets/images/toto.png';
-import dulux from '../assets/images/dulux.png';
-import panasonic from '../assets/images/panasonic.png';
-import alexindo from '../assets/images/alexindo.png';
-import bosch from '../assets/images/bosch.png';
+import React, { useState, useEffect } from "react";
 
 const brands = [
-  { id: 1, src: rucika, alt: 'Rucika' },
-  { id: 2, src: philips, alt: 'Philips' },
-  { id: 3, src: holcim, alt: 'Holcim' },
-  { id: 4, src: makita, alt: 'Makita' },
-  { id: 5, src: toto, alt: 'Toto' },
-  { id: 6, src: dulux, alt: 'Dulux' },
-  { id: 7, src: panasonic, alt: 'Panasonic' },
-  { id: 8, src: alexindo, alt: 'Alexindo' },
-  { id: 9, src: bosch, alt: 'Bosch' },
+  { id: 1, src: "/assets/images/rucika.png", alt: "Rucika" },
+  { id: 2, src: "/assets/images/philips.png", alt: "Philips" },
+  { id: 3, src: "/assets/images/holcim.png", alt: "Holcim" },
+  { id: 4, src: "/assets/images/makita.png", alt: "Makita" },
+  { id: 5, src: "/assets/images/toto.png", alt: "Toto" },
+  { id: 6, src: "/assets/images/dulux.png", alt: "Dulux" },
+  { id: 7, src: "/assets/images/panasonic.png", alt: "Panasonic" },
+  { id: 8, src: "/assets/images/alexindo.png", alt: "Alexindo" },
+  { id: 9, src: "/assets/images/bosch.png", alt: "Bosch" },
 ];
 
 export default function LogoSlider() {
@@ -31,7 +20,6 @@ export default function LogoSlider() {
   const next = () => setIndex((i) => (i + 1) % total);
   const prev = () => setIndex((i) => (i - 1 + total) % total);
 
-  // Auto-slide tiap 3 detik
   useEffect(() => {
     const timer = setInterval(() => {
       next();
@@ -39,25 +27,21 @@ export default function LogoSlider() {
     return () => clearInterval(timer);
   }, []);
 
-  // Slice isi 5 item dimulai dari index
   const slice = [...Array(visible)].map((_, i) => brands[(index + i) % total]);
 
   return (
-    <div className="w-full flex items-center justify-center gap-2">
-      {/* Panah kiri */}
+    <div className="flex w-full items-center justify-center gap-2">
       <button
         onClick={prev}
-        className="bg-white w-7 h-7 rounded-full shadow flex items-center justify-center -translate-x-1/2 z-10"
+        className="z-10 -translate-x-1/2 flex h-7 w-7 items-center justify-center rounded-full bg-white shadow"
       >
-        <span className="text-sm font-bold text-gray-800">{'‹'}</span>
+        <span className="text-sm font-bold text-gray-800">‹</span>
       </button>
-
-      {/* Kontainer Logo */}
-      <div className="flex overflow-hidden gap-3">
+      <div className="flex gap-3 overflow-hidden">
         {slice.map((brand) => (
           <div
             key={brand.id}
-            className="w-24 h-16 flex items-center justify-center border rounded-lg bg-white shadow-sm"
+            className="flex h-16 w-24 items-center justify-center rounded-lg border bg-white shadow-sm"
           >
             <img
               src={brand.src}
@@ -67,13 +51,11 @@ export default function LogoSlider() {
           </div>
         ))}
       </div>
-
-      {/* Panah kanan */}
       <button
         onClick={next}
-        className="bg-white w-7 h-7 rounded-full shadow flex items-center justify-center translate-x-1/2 z-10"
+        className="z-10 translate-x-1/2 flex h-7 w-7 items-center justify-center rounded-full bg-white shadow"
       >
-        <span className="text-sm font-bold text-gray-800">{'›'}</span>
+        <span className="text-sm font-bold text-gray-800">›</span>
       </button>
     </div>
   );

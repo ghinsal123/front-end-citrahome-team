@@ -1,13 +1,12 @@
 import React from "react";
-import semenImg from '../assets/images/semen.png';
 
 export default function Image() {
   return (
-    <div className="relative w-48 h-64 rounded-xl overflow-hidden shadow-md group">
+    <div className="relative h-64 w-48 overflow-hidden rounded-xl shadow-md group">
       <img
-        src={semenImg}
+        src="/assets/images/semen.png"
         alt="Semen Tiga Roda"
-        className="w-full h-full object-cover transition duration-300 ease-in-out filter brightness-75 group-hover:brightness-100"
+        className="h-full w-full object-cover transition duration-300 ease-in-out filter brightness-75 group-hover:brightness-100"
       />
     </div>
   );

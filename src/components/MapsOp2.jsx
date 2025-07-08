@@ -9,7 +9,7 @@ export default function MapsOp2() {
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        title="Map"
+        title="Citra Home Map Location"
       />
     </div>
   );

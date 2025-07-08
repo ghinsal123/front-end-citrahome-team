@@ -77,13 +77,13 @@ export default function Home() {
       <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Popular</h2>
         <div className="space-y-6 max-w-xs">
-          <Popular src="/img/popular1.jpg" />
+          <Popular />
         </div>
       </section>
       <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Best</h2>
         <div className="space-y-6 max-w-xs">
-          <Best src="/img/best1.jpg" />
+          <Best />
         </div>
       </section>
       <section>
