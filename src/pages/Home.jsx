@@ -30,6 +30,7 @@ import PromoSlider from "../components/PromoSlider";
 import ClaimButton from "../components/ClaimButton";
 import CallButton from "../components/CallButton";
 import MapsOp2 from "../components/MapsOp2";
+import MozaikCard from "../components/MozaikCard";
 
 
 
@@ -176,7 +177,7 @@ export default function Home() {
           <CallButton/>
         </div>
       </section>
-       <section>
+      <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Maps Op 2</h2>
         <div className="space-y-6">
           <MapsOp2/>
@@ -185,6 +186,8 @@ export default function Home() {
       <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Product Card Pro</h2>
        <ProductCardPro />
+      </section>
+      <section>
         <h2 className="font-bold text-gray-800 mb-2">Preview Caroesel</h2>
         <div className="space-y-6">
           <Caraosel/>
@@ -212,6 +215,12 @@ export default function Home() {
         <h2 className="font-bold text-gray-800 mb-2">Preview Promo</h2>
         <div className="space-y-6">
           <PromoSlider/>
+        </div>
+      </section>
+      <section>
+        <h2 className="font-bold text-gray-800 mb-8">Preview Mozaik Card</h2>
+        <div className="space-y-6">
+          <MozaikCard/>
         </div>
       </section>
     </div>
