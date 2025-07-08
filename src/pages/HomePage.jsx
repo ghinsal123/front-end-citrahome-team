@@ -4,6 +4,7 @@ import PromoSlider from "../components/PromoSlider";
 import Search from "../components/Search";
 import CategoryTabs from "../components/CategoryTabs";
 import ProductCardPro from "../components/ProductCardPro";
+import RenovasiTamanCard from "../components/RenovasiTamanCard";
 import TestimonialSlider from "../components/TestimonialSlider";
 import MapsOp2 from "../components/MapsOp2";
 import TopBar from "../components/TopBar";
@@ -36,6 +37,11 @@ export default function Home() {
       <section>
         <div>
           <ProductCardPro/>
+        </div>
+      </section>
+      <section>
+        <div>
+          <RenovasiTamanCard/>
         </div>
       </section>
       <section>
