@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   DevicePhoneMobileIcon,
   FunnelIcon,
@@ -45,9 +45,18 @@ const slides = [
 export default function PromoSlider() {
   const [idx, setIdx] = useState(0);
   const total = slides.length;
+
   const prev = () => setIdx((p) => (p === 0 ? total - 1 : p - 1));
   const next = () => setIdx((p) => (p === total - 1 ? 0 : p + 1));
   const slide = slides[idx];
+
+  // Auto-slide
+  useEffect(() => {
+    const timer = setInterval(() => {
+      next();
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [idx]);
 
   const DiscountLayout = () => (
     <div className="flex flex-col lg:flex-row items-center justify-center gap-10 w-full">
@@ -98,8 +107,6 @@ export default function PromoSlider() {
     </div>
   );
 
-  
-
   const SolutionLayout = () => (
     <div className="flex flex-col lg:flex-row items-center gap-10 w-full">
       <div className="text-white space-y-3 max-w-md">
@@ -130,48 +137,48 @@ export default function PromoSlider() {
     return <SolutionLayout />;
   };
 
-return (
-  <section className="relative w-full max-w-5xl h-[580px] mx-auto overflow-hidden select-none shadow-lg">
-    <img src={slide.bg} alt="bg" className="absolute inset-0 w-full h-full object-cover" />
-    <div className="absolute inset-0 bg-black/50" />
-    <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-white to-transparent" />
+  return (
+    <section className="relative w-full h-screen overflow-hidden select-none">
+      <img src={slide.bg} alt="bg" className="absolute inset-0 w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-white to-transparent" />
 
-    <div className="relative z-10 h-full flex items-center justify-center px-6 md:px-20">
-      {renderContent()}
-    </div>
+      <div className="relative z-10 h-full flex items-center justify-start px-6 md:px-32">
+        {renderContent()}
+      </div>
 
-    {/* Navigasi Slider */}
-    <button onClick={prev} aria-label="prev" className="absolute left-6 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full z-20">
-      <ChevronLeftIcon className="w-6 h-6 text-black" />
-    </button>
-    <button onClick={next} aria-label="next" className="absolute right-6 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full z-20">
-      <ChevronRightIcon className="w-6 h-6 text-black" />
-    </button>
+      {/* Navigasi */}
+      <button onClick={prev} aria-label="prev" className="absolute left-6 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full z-20">
+        <ChevronLeftIcon className="w-3 h-3 text-black" />
+      </button>
+      <button onClick={next} aria-label="next" className="absolute right-6 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full z-20">
+        <ChevronRightIcon className="w-3 h-3 text-black" />
+      </button>
 
-    {/* Dot Indicator */}
-    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-      {slides.map((_, i) => (
-        <button
-          key={i}
-          onClick={() => setIdx(i)}
-          className={`h-2 rounded-full transition-all ${i === idx ? "w-6 bg-orange-600" : "w-2 bg-white/80"}`}
-        />
-      ))}
-    </div>
+      {/* Dots */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIdx(i)}
+            className={`h-2 rounded-full transition-all ${i === idx ? "w-6 bg-[#522202]" : "w-2 bg-white/80"}`}
+          />
+        ))}
+      </div>
 
-    {/* WhatsApp Bubble */}
-    <div className="absolute bottom-5 left-5 z-40">
-      <div className="group relative flex items-center">
-        <div className="absolute left opacity-0 group-hover:opacity-100 group-hover:-translate-x-2 bg-white text-green-600 text-xs font-semibold shadow-md px-3 py-1 transition duration-300 whitespace-nowrap rounded-md">
-          <p>Hubungi Kami</p>
-          <p>Sekarang!</p>
-          <div className="absolute bottom-0 left-0 w-0 h-0 border-t-[8px] border-l-[8px] border-t-transparent border-l-green-600" />
-        </div>
-        <div className="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md transition duration-300 group-hover:translate-x-21">
-          <img src="/assets/images/logo-whatsapp.png" alt="WhatsApp" className="w-8 h-8" />
+      {/* WhatsApp */}
+      <div className="absolute bottom-5 left-5 z-40">
+        <div className="group relative flex items-center">
+          <div className="absolute left opacity-0 group-hover:opacity-100 group-hover:-translate-x-2 bg-white text-green-600 text-xs font-semibold shadow-md px-3 py-1 transition duration-300 whitespace-nowrap rounded-md">
+            <p>Hubungi Kami</p>
+            <p>Sekarang!</p>
+            <div className="absolute bottom-0 left-0 w-0 h-0 border-t-[8px] border-l-[8px] border-t-transparent border-l-green-600" />
+          </div>
+          <div className="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md transition duration-300 group-hover:translate-x-21">
+            <img src="/assets/images/logo-whatsapp.png" alt="WhatsApp" className="w-8 h-8" />
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
 }

@@ -19,7 +19,7 @@ export default function TopBar() {
           <ul className="space-y-2">
             <li>
               <a
-                href="https://shopee.co.id/citrahome"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -32,7 +32,7 @@ export default function TopBar() {
             </li>
             <li>
               <a
-                href="https://tokopedia.com/citrahome"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
               >

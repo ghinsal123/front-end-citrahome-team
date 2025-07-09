@@ -51,7 +51,7 @@ const TestimonialSlider = () => {
       <div className="overflow-hidden">
         <div className="flex justify-center gap-4 transition duration-500 ease-in-out">
           {visibleTestimonials.map((item) => (
-            <div key={item.id} className="w-72 px-2 flex-shrink-0">
+            <div key={item.id} className="w-65 px-2 flex-shrink-0">
               <div
                 className="relative bg-cover bg-center rounded-xl shadow-md"
                 style={{

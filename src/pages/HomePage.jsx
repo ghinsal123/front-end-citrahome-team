@@ -13,7 +13,7 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen p-6 space-y-10 bg-white">
+    <div className="w-full bg-white">
       <section>
         <div>
           <Navbar/>
@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </section>      
       <section>
-        <div>
+        <div className="p-6 space-y-10">
           <ProductCardPro/>
         </div>
       </section>

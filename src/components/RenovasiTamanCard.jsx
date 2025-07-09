@@ -27,7 +27,7 @@ const RenovasiTamanCard = () => {
             {/* Card depan (gambar mozaik) */}
             <div className="relative">
                 <img
-                src="assets/images/renovasi.png"
+                src="/assets/images/renovasi.png"
                 alt="Mozaik"
                 className="object-cover w-full h-full"
                 />
