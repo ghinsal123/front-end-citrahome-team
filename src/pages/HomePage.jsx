@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="w-full bg-white">
       <section>
-        <div>
+        <div className="px-23">
           <Navbar/>
         </div>
       </section>
@@ -30,32 +30,32 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div>
+        <div className="px-10">
           <CategoryTabs/>
         </div>
       </section>      
       <section>
-        <div>
+        <div className="px-10">
           <ProductCardPro/>
         </div>
       </section>
       <section>
-        <div>
+        <div className="px-10">
           <RenovasiTamanCard/>
         </div>
       </section>
       <section>
-        <div>
+        <div className="px-10">
           <TestimonialSlider/>
         </div>
       </section>
       <section>
-        <div>
+        <div className="px-17">
           <MapsOp2/>
         </div>
       </section>
       <section>
-        <div>
+        <div className="px-22">
           <TopBar/>
         </div>
       </section>
