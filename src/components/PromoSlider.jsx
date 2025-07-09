@@ -138,7 +138,7 @@ export default function PromoSlider() {
   };
 
   return (
-    <section className="relative w-full h-125 overflow-hidden select-none">
+    <section className="relative w-full h-130 overflow-hidden select-none">
       <img src={slide.bg} alt="bg" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-black/50" />
       <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-white to-transparent" />
