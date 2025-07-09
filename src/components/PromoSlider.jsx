@@ -50,65 +50,74 @@ export default function PromoSlider() {
   const next = () => setIdx((p) => (p === total - 1 ? 0 : p + 1));
   const slide = slides[idx];
 
-  // Auto-slide
-  useEffect(() => {
-    const timer = setInterval(() => {
-      next();
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [idx]);
+  // // Auto-slide
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     next();
+  //   }, 5000);
+  //   return () => clearInterval(timer);
+  // }, [idx]);
 
-  const DiscountLayout = () => (
-    <div className="flex flex-col lg:flex-row items-center justify-center gap-10 w-full">
-      <div className="text-white space-y-3 max-w-md">
-        <h1 className="font-extrabold text-2xl md:text-4xl leading-tight text-center">{slide.title}</h1>
-        <div className="flex items-center gap-2 text-lg md:text-2xl font-bold">
-          <span>{slide.discountText}</span>
-          <span className="text-3xl">+</span>
-          <span>{slide.installment}</span>
-        </div>
-        <span className="inline-block bg-[#eb5d3e] px-3 py-1 text-[11px] md:text-sm font-semibold rounded">
-          {slide.period}
-        </span>
+const DiscountLayout = () => (
+  <div className="flex flex-col lg:flex-row items-center justify-center gap-10 w-full">
+    <div className="text-white space-y-2 max-w-md text-center"> {/* space-y dari 3 jadi 2 */}
+      <h1 className="font-extrabold text-2xl md:text-4xl leading-tight">
+        {slide.title}
+      </h1>
+      <div className="flex items-center justify-center gap-1 md:gap-2 text-lg md:text-2xl font-bold">
+        <span>{slide.discountText}</span>
+        <span className="text-3xl">+</span>
+        <span>{slide.installment}</span>
       </div>
-      <div className="relative mt-8 lg:mt-0">
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-8 w-43 h-40 bg-orange-500 rounded-full -z-10" />
-        <div className="relative w-[280px] h-[160px]">
-          <div className="absolute left-8 top-0 bg-white rounded-full p-4 w-38 h-38 shadow-md flex items-center justify-center -ml-8">
-            <img src={slide.images[1]} alt="chair 2" className="w-30 h-30 object-contain" />
-          </div>
-          <div className="absolute left-30 top-0 bg-white rounded-full p-4 w-40 h-40 shadow-md flex items-center justify-center">
-            <img src={slide.images[0]} alt="chair 1" className="w-32 h-32 object-contain" />
-          </div>
+      <span className="inline-block bg-[#eb5d3e] px-3 py-1 text-xs md:text-sm font-semibold rounded">
+        {slide.period}
+      </span>
+    </div>
+
+    <div className="relative mt-8 lg:mt-0">
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-8 w-43 h-40 bg-orange-500 rounded-full -z-10" />
+      <div className="relative w-[280px] h-[160px]">
+        <div className="absolute left-8 top-0 bg-white rounded-full p-4 w-38 h-38 shadow-md flex items-center justify-center -ml-8">
+          <img src={slide.images[1]} alt="chair 2" className="w-30 h-30 object-contain" />
+        </div>
+        <div className="absolute left-30 top-0 bg-white rounded-full p-4 w-40 h-40 shadow-md flex items-center justify-center">
+          <img src={slide.images[0]} alt="chair 1" className="w-32 h-32 object-contain" />
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 
-  const DiscountOnlyLayout = () => (
-    <div className="flex flex-col lg:flex-row items-center justify-center gap-10 w-full">
-      <div className="text-white space-y-3 max-w-md">
-        <h1 className="text-3xl md:text-4xl font-extrabold">{slide.discountText}</h1>
-        <h2 className="text-5xl md:text-6xl font-extrabold">{slide.discountPercent}</h2>
-        <span className="inline-block bg-[#eb5d3e] px-3 py-1 text-[11px] md:text-sm font-semibold rounded">
-          {slide.period}
-        </span>
-      </div>
-      <div className="relative mt-8 lg:mt-0">
-        <div className="absolute -right-6 top-4 w-80 h-40 bg-gradient-to-bl from-orange-500/90 to-orange-500/0 rounded-tr-3xl -z-10" />
-        <div className="relative w-80 h-40">
-          <img src={slide.images[1]} alt="ac2" className="absolute left-1/2 -translate-x-1/2 top-0 w-28 h-28 object-contain z-20" />
-          <div className="absolute bottom-0 inset-x-0 flex justify-center gap-2">
-            <img src={slide.images[2]} alt="ac3" className="w-24 h-20 object-contain z-10" />
-            <img src={slide.images[0]} alt="ac1" className="w-24 h-30 object-contain z-10" />
-          </div>
-        </div>
+const DiscountOnlyLayout = () => (
+  <div className="flex flex-col lg:flex-row items-center justify-center gap-10 w-full px-4 lg:px-0">
+    {/* Kiri: Teks */}
+    <div className="text-white space-y-3 text-left max-w-xs md:max-w-sm">
+      <h1 className="text-3xl md:text-4xl font-extrabold">{slide.discountText}</h1>
+      <h2 className="text-5xl md:text-6xl font-extrabold">{slide.discountPercent}</h2>
+      <span className="inline-block bg-[#eb5d3e] px-4 py-1 text-xs md:text-sm font-semibold rounded">
+        {slide.period}
+      </span>
+    </div>
+
+    {/* Kanan: Produk */}
+    <div className="relative mt-6 lg:mt-0">
+      {/* Card background */}
+      <div className="absolute -right-4 -top-4 w-[330px] h-[180px] bg-orange-400/20 backdrop-blur-md rounded-2xl -z-10" />
+
+      <div className="relative w-[330px] h-[180px] flex items-end justify-center gap-2 px-4 pb-4">
+        {/* Tengah: besar */}
+        <img src={slide.images[1]} alt="product-2" className="w-24 h-32 object-contain z-20" />
+        {/* Kiri */}
+        <img src={slide.images[0]} alt="product-1" className="w-20 h-28 object-contain z-10" />
+        {/* Kanan */}
+        <img src={slide.images[2]} alt="product-3" className="w-20 h-28 object-contain z-10" />
       </div>
     </div>
-  );
+  </div>
+);
 
   const SolutionLayout = () => (
-    <div className="flex flex-col lg:flex-row items-center gap-10 w-full">
+    <div className="flex flex-col lg:flex-row items-center justify-center gap-10 w-full">
       <div className="text-white space-y-3 max-w-md">
         <img src={slide.logo} alt="logo" className="h-8 w-auto" />
         {slide.titleLines?.map((line) => (
@@ -123,7 +132,7 @@ export default function PromoSlider() {
           ))}
         </div>
       </div>
-      <div className="relative mt-8 lg:mt-0 w-96 h-40 bg-white shadow-xl rounded-tr-2xl rounded-br-2xl rounded-bl-2xl rounded-tl-[160px] overflow-hidden flex items-center justify-center">
+      <div className="relative mt-8 lg:mt-0 w-96 h-55 bg-white shadow-xl rounded-tr-2xl rounded-br-2xl rounded-tl-[300px] flex items-center justify-center">
         {slide.images.map((src) => (
           <img key={src} src={src} alt="tank" className="object-contain mx-2" />
         ))}
@@ -147,12 +156,22 @@ export default function PromoSlider() {
         {renderContent()}
       </div>
 
-      {/* Navigasi */}
-      <button onClick={prev} aria-label="prev" className="absolute left-6 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full z-20">
-        <ChevronLeftIcon className="w-3 h-3 text-black" />
+      {/* Navigasi Kiri */}
+      <button
+        onClick={prev}
+        aria-label="prev"
+        className="absolute left-6 top-1/2 -translate-y-1/2 bg-[#ffffffa1] hover:bg-[#ffffff] transition duration-300 p-2 rounded-full z-20 group"
+      >
+        <ChevronLeftIcon className="w-4 h-4 text-black" />
       </button>
-      <button onClick={next} aria-label="next" className="absolute right-6 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full z-20">
-        <ChevronRightIcon className="w-3 h-3 text-black" />
+
+      {/* Navigasi Kanan */}
+      <button
+        onClick={next}
+        aria-label="next"
+        className="absolute right-6 top-1/2 -translate-y-1/2 bg-[#ffffffa1] hover:bg-[#ffffff] transition duration-300 p-2 rounded-full z-20 group"
+      >
+        <ChevronRightIcon className="w-4 h-4 text-black" />
       </button>
 
       {/* Dots */}
