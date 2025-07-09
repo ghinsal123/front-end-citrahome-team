@@ -138,7 +138,7 @@ export default function PromoSlider() {
   };
 
   return (
-    <section className="relative w-full h-screen overflow-hidden select-none">
+    <section className="relative w-full h-125 overflow-hidden select-none">
       <img src={slide.bg} alt="bg" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-black/50" />
       <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-white to-transparent" />
@@ -174,8 +174,8 @@ export default function PromoSlider() {
             <p>Sekarang!</p>
             <div className="absolute bottom-0 left-0 w-0 h-0 border-t-[8px] border-l-[8px] border-t-transparent border-l-green-600" />
           </div>
-          <div className="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md transition duration-300 group-hover:translate-x-21">
-            <img src="/assets/images/logo-whatsapp.png" alt="WhatsApp" className="w-8 h-8" />
+          <div className="bg-white rounded-full w-15 h-15 flex items-center justify-center shadow-md transition duration-300 group-hover:translate-x-21">
+            <img src="/assets/images/logo-whatsapp.png" alt="WhatsApp" className="w-10 h-10" />
           </div>
         </div>
       </div>

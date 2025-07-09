@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </section>      
       <section>
-        <div className="p-6 space-y-10">
+        <div>
           <ProductCardPro/>
         </div>
       </section>
