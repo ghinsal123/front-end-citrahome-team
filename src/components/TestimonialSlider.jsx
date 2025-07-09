@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
+import {ChevronLeftIcon , ChevronRightIcon } from "@heroicons/react/24/solid";
 
 const testimonials = [
   { id: 1, name: "Ibu Sukijan", role: "Ibu Rumah Tangga", text: "Keramik dan catnya bagus banget." },
@@ -28,26 +28,36 @@ const TestimonialSlider = () => {
 
   return (
     <div className="relative w-full max-w-6xl mx-auto px-4">
-      <button
-        onClick={handlePrev}
-        disabled={page === 0}
-        className={`absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-1 shadow ${
-          page === 0 ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-100"
-        }`}
-      >
-        <ArrowLeftIcon className="w-5 h-5 text-gray-800" />
-      </button>
+      {/* Judul */}
+      <div className="text-center mb-8">
+        <p className="text-sm text-orange-500 tracking-widest font-semibold">TESTIMONIALS</p>
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mt-2">Testimoni Pelanggan Kami</h2>
+      </div>
 
-      <button
-        onClick={handleNext}
-        disabled={page >= totalPages - 1}
-        className={`absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-1 shadow ${
-          page >= totalPages - 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-100"
-        }`}
-      >
-        <ArrowRightIcon className="w-5 h-5 text-gray-800" />
-      </button>
+     {/* Tombol kiri */}
+<button
+  onClick={handlePrev}
+  disabled={page === 0}
+  className={`absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-1 shadow ${
+    page === 0 ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-100"
+  }`}
+>
+  <ChevronLeftIcon  className="w-4 h-4 text-black" />
+</button>
 
+{/* Tombol kanan */}
+<button
+  onClick={handleNext}
+  disabled={page >= totalPages - 1}
+  className={`absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-1 shadow ${
+    page >= totalPages - 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-100"
+  }`}
+>
+  <ChevronRightIcon className="w-4 h-4 text-black" />
+</button>
+
+
+      {/* Slider */}
       <div className="overflow-hidden">
         <div className="flex justify-center gap-4 transition duration-500 ease-in-out">
           {visibleTestimonials.map((item) => (

@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="w-full bg-white">
       <section>
-        <div className="px-23">
+        <div>
           <Navbar/>
         </div>
       </section>

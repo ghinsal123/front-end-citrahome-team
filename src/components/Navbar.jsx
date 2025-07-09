@@ -19,7 +19,7 @@ export default function Navbar() {
             )}
           </button>
 
-          <div className="flex items-center gap-2 mx-auto md:mx-0">
+          <div className="flex items-center gap-2 mx-auto md:mx-0 px-23">
             <img
               src="/assets/images/logocitrahome.jpeg"
               alt="Logo"
@@ -28,7 +28,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <nav className="hidden md:flex gap-6 text-[#5c2b14] text-sm font-medium whitespace-nowrap">
+        <nav className="hidden md:flex gap-6 text-[#5c2b14] text-sm font-medium whitespace-nowrap px-23">
             <a href="#" className="font-bold border-b-2 border-[#5c2b14]">Home</a>
             <a href="#">Produk</a>
             <a href="#">Promo</a>
